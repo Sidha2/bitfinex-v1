@@ -3,9 +3,8 @@
 I get from somewhere (can't remember where, sorry) this API and make few changes for my own need.
 
 ## Install
-Add this to your composer.json
 ```
-
+composer require bedri/bitfinex-v1
 ```
 
 ## Usage
