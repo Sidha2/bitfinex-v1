@@ -1,5 +1,5 @@
 {
-    "name": "sidha2/bitfinex-v1",
+    "name": "bedri/bitfinex-v1",
     "description": "Bitfinex API wrapper V1",
     "type": "library",
     "authors": [
