@@ -65,7 +65,7 @@ class BitfinexV1{
         
         $request = "/v1/pubticker/";
         $url = $this->url . $request . $symbol;
-        $data_stream = file_get_contents($url);
+        $data_stream = @file_get_contents($url);
         $ticker_data = json_decode($data_stream, true);
         $ticker = $ticker_data['last_price'];
         
@@ -76,7 +76,7 @@ class BitfinexV1{
     public function read_all_pairs(){
 		
 		$url = "https://api.bitfinex.com/v1/tickers";
-		$data_stream = file_get_contents($url);
+		$data_stream = @file_get_contents($url);
 		$ticker_data = json_decode($data_stream, true);
 		
 		return $ticker_data;
@@ -85,7 +85,7 @@ class BitfinexV1{
     public function symbolsDetails(){
         
         $url = "https://api.bitfinex.com/v1/symbols_details";
-		$data_stream = file_get_contents($url);
+		$data_stream = @file_get_contents($url);
 		$ticker_data = json_decode($data_stream, true);
 		
 		return $ticker_data;
